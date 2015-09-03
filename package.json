@@ -1,0 +1,19 @@
+{
+  "name": "southwind",
+  "version": "1.0.0",
+  "description": "SEAN stack app ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brienpafford/southwind.git"
+  },
+  "author": "Brien Pafford, Greg Dick, Katy Justiss, Edwin Acevedo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brienpafford/southwind/issues"
+  },
+  "homepage": "https://github.com/brienpafford/southwind#readme"
+}

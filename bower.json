@@ -1,0 +1,21 @@
+{
+  "name": "southwind",
+  "main": "index.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/brienpafford/southwind",
+  "authors": [
+    "Brien Pafford <bcpaff@gmail.com>"
+  ],
+  "description": "SEAN stack app",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5"
+  }
+}
