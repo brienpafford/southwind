@@ -1,2 +1,2 @@
 # southwind
-SEAN stack app for ordering products
+SEAN stack (PostgreSQL Express AngularJS Node.js) app for ordering products
