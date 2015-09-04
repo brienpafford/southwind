@@ -18,10 +18,10 @@ function query (sql, cb) {
 
   });
 };
-
+function Order()  {}
 
 Order.findAll = function (cb) {
-  query('SELECT * FROM Categories;', function (err, orders) {
+  query('SELECT * FROM orders;', function (err, orders) {
     if (err) throw err;
     console.log(orders);
   });
