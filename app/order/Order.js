@@ -1,8 +1,9 @@
 'use strict';
 
+var _ = require('lodash');
 var pg = require('pg');
 
-var url = 'postgres://localhost:5050/Northwind';
+var url = 'postgres://localhost/Northwind';
 
 function query (sql, cb) {
   pg.connect(url, function (err, db, done) {
@@ -18,15 +19,24 @@ function query (sql, cb) {
 
   });
 };
-function Order()  {}
+
+function Order() {};
 
 Order.findAll = function (cb) {
   query('SELECT * FROM orders;', function (err, orders) {
     if (err) throw err;
-    console.log(orders);
+    var prototypedPosts = orders.map(function (order) {
+      return setPrototype(order);
+    });
+
+    cb(err, prototypedPosts);
   });
 };
 
 
 
 module.exports = Order;
+
+function setPrototype(pojo) {
+  return _.create(Order.prototype, pojo);
+}
