@@ -1,5 +1,7 @@
 extends ../templates/layout
 
-div(ng-controller="OrderCtrl as order")
-  ul
-    li(ng-repeat="o in order.data")
+block content
+  div(ng-controller="OrderCtrl as order")
+    ul
+      li(ng-repeat="o in order.data")
+        p OrderID: {{o.OrderID}}

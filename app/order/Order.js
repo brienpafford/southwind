@@ -3,7 +3,7 @@
 var _ = require('lodash');
 var pg = require('pg');
 
-var url = 'postgres://localhost/Northwind';
+var url = 'postgres://localhost:5432/Northwind';
 
 function query (sql, cb) {
   pg.connect(url, function (err, db, done) {
@@ -23,7 +23,7 @@ function query (sql, cb) {
 function Order() {};
 
 Order.findAll = function (cb) {
-  query('SELECT * FROM orders;', function (err, orders) {
+  query('SELECT * FROM orders LIMIT 20;', function (err, orders) {
     if (err) throw err;
     var prototypedPosts = orders.map(function (order) {
       return setPrototype(order);

@@ -8,6 +8,8 @@ var app = module.exports = express();
 
 app.set('port', process.env.PORT || 3000);
 
+app.set('views', __dirname);
+
 app.set('view engine', 'jade');
 
 app.locals.title = 'Southwind';
