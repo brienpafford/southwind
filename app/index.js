@@ -6,7 +6,11 @@ var routes = require('./routes');
 
 var app = module.exports = express();
 
+app.set('port', process.env.PORT || 3000);
+
 app.set('view engine', 'jade');
+
+app.locals.title = 'Southwind';
 
 app.use(express.static('www'));
 

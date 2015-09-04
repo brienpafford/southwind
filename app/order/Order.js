@@ -2,7 +2,7 @@
 
 var pg = require('pg');
 
-var url = 'postgress://localhost:5050/Northwind';
+var url = 'postgres://localhost:5050/Northwind';
 
 function query (sql, cb) {
   pg.connect(url, function (err, db, done) {
