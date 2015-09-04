@@ -1,12 +1,3 @@
 angular
-  .module('southwind', [])
-  .controller('OrderCtrl', function ($http){
-  var order = this;
+  .module('southwind', ['ui.router']);
 
-  $http
-    .get('/')
-    .success(function (res){
-    order.data = res.orders;
-
-  });
-});
