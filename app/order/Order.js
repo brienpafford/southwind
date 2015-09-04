@@ -25,11 +25,11 @@ function Order() {};
 Order.findAll = function (cb) {
   query('SELECT * FROM orders LIMIT 20;', function (err, orders) {
     if (err) throw err;
-    var prototypedPosts = orders.map(function (order) {
+    var prototypedOrders = orders.map(function (order) {
       return setPrototype(order);
     });
 
-    cb(err, prototypedPosts);
+    cb(err, prototypedOrders);
   });
 };
 
